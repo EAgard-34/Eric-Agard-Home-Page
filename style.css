@@ -26,13 +26,6 @@ header{
     background-color: var(--header-color);      
 }
 
-.material-symbols-outlined{
-    /* display: none; */
-    visibility: hidden;
-    color:white;
-    font-size: 48px;
-}
-
 /* Logo image - center, width set, height (auto) */
 header > img{
     display: block;
@@ -54,8 +47,6 @@ h2{
 /* Navbar container - background color */
 nav{
     background-color: var(--navbar-color); 
-    
-
 }
 
 /* navbar unorder list container - remove bullet points and center text */
@@ -68,11 +59,9 @@ nav ul{
 }
 
 /* navbar list items - inline block, padding, margin and color */
-nav li{
-   
+nav li{  
     margin: 1rem 0 1rem 0;
-    padding: 0 2rem 0 2rem;
-    
+    padding: 0 2rem 0 2rem;    
 }
 
 section{
@@ -84,6 +73,7 @@ section{
 section h2{
    text-align: center;   
 }
+
 article{
     flex:1;
 }
@@ -133,7 +123,9 @@ a:hover{
     background-color: var(--background-color);
     color:#100C0D;
     padding:1rem;
-    opacity: 70%;    
+    opacity: 70%; 
+    transform: scale(2);   
+    font-size:1.2rem;
 }
 a:active{
     color:red;
@@ -159,22 +151,20 @@ footer img:hover{
     animation-fill-mode: both;
 }
 
-.material-symbols-outlined:hover{
-    display:inline-block;
-}
-
-
-
 @media screen and (max-width: 480px){
     section:nth-child(2){
         flex-direction: column;
     }
-    nav{
-        display: none;
-    }
+    
+   nav ul{
+        margin: 0;
+        padding:0; 
+        font-size: 1rem; 
+        flex-direction: column;
+        /* text-align: left; */
 
-    .material-symbols-outlined{ 
-        visibility: visible;
     }
+    
+
      
 }
